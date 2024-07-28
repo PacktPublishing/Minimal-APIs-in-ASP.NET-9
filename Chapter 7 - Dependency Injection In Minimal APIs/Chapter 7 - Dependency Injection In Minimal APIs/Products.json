@@ -1,0 +1,32 @@
+[
+  {
+    "Id": 1,
+    "Name": "Laptop",
+    "Description": "A high-performance laptop suitable for all your computing needs.",
+    "RRP": 999.99
+  },
+  {
+    "Id": 2,
+    "Name": "Smartphone",
+    "Description": "A latest generation smartphone with a stunning display and excellent camera.",
+    "RRP": 799.99
+  },
+  {
+    "Id": 3,
+    "Name": "Headphones",
+    "Description": "Noise-cancelling headphones with superior sound quality.",
+    "RRP": 199.99
+  },
+  {
+    "Id": 4,
+    "Name": "Smartwatch",
+    "Description": "A smartwatch with fitness tracking and health monitoring features.",
+    "RRP": 299.99
+  },
+  {
+    "Id": 5,
+    "Name": "Tablet",
+    "Description": "A lightweight tablet with a vibrant display, perfect for entertainment on the go.",
+    "RRP": 399.99
+  }
+] 

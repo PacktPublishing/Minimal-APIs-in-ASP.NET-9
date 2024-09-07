@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35103.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Chapter 12 - Caching Strategies for Enhanced Performance", "Chapter 12 - Caching Strategies for Enhanced Performance.csproj", "{4C38E374-54B8-4C0A-A241-4876CA897095}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4C38E374-54B8-4C0A-A241-4876CA897095}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C38E374-54B8-4C0A-A241-4876CA897095}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C38E374-54B8-4C0A-A241-4876CA897095}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C38E374-54B8-4C0A-A241-4876CA897095}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42585C9D-8699-4C10-9C4D-5C236547CE2D}
+	EndGlobalSection
+EndGlobal

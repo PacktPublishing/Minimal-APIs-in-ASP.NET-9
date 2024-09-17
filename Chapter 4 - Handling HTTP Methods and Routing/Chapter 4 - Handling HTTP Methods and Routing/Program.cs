@@ -34,6 +34,32 @@ namespace Chapter_4___Handling_HTTP_Methods_and_Routing
                 return Results.Created();
             });
 
+            app.MapPost("/todoitems", (TodoItem item) =>
+            {
+                ToDoItems.Add(item);
+
+                return Results.Created();
+
+            }).AddEndpointFilter(async (context, next) =>
+            {
+                var toDoItem = context.GetArgument<TodoItem>(0);
+                if (toDoItem.Assignee == "Joe Bloggs")
+                {
+                    return Results.Problem("Joe Bloggs cannot be assigned todo items");
+                }
+                return await next(context);
+            });
+
+            app.MapPost("/todoitems", (TodoItem item) =>
+            {
+                ToDoItems.Add(item);
+
+                return Results.Created();
+
+            }).AddEndpointFilter<CreateTodoFilter>();
+
+
+
             app.MapPut("/todoitems", (TodoItem item) =>
             {
                 var index = ToDoItems.FindIndex(x => x.Id == item.Id);

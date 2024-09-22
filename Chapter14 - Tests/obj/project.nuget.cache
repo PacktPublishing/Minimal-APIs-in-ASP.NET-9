@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CJ8sID5ax7o=",
-  "success": true,
-  "projectFilePath": "E:\\Repos\\Packt\\Minimal-APIs-in-ASP.NET-8\\Chapter 14\\Chapter14Tests\\Chapter14Tests.csproj",
+  "dgSpecHash": "W26Le83IRPE=",
+  "success": false,
+  "projectFilePath": "E:\\Repos\\Packt\\Minimal-APIs-in-ASP.NET-8\\Chapter 14 - Unit Testing, Compatibility and Deployment of Minimal APIs\\Chapter14 - Tests\\Chapter14Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nickp\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\nickp\\.nuget\\packages\\microsoft.aspnetcore.mvc.testing\\8.0.8\\microsoft.aspnetcore.mvc.testing.8.0.8.nupkg.sha512",
@@ -56,5 +56,15 @@
     "C:\\Users\\nickp\\.nuget\\packages\\xunit.extensibility.execution\\2.6.6\\xunit.extensibility.execution.2.6.6.nupkg.sha512",
     "C:\\Users\\nickp\\.nuget\\packages\\xunit.runner.visualstudio\\2.5.6\\xunit.runner.visualstudio.2.5.6.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'E:\\Repos\\Packt\\Minimal-APIs-in-ASP.NET-8\\Chapter 14 - Unit Testing, Compatibility and Deployment of Minimal APIs\\Chapter 14\\Chapter 14.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "E:\\Repos\\Packt\\Minimal-APIs-in-ASP.NET-8\\Chapter 14 - Unit Testing, Compatibility and Deployment of Minimal APIs\\Chapter 14\\Chapter 14.csproj",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
 }

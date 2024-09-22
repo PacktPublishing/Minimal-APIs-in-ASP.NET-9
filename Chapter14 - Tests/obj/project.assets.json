@@ -1169,19 +1169,6 @@
         "build": {
           "build/net6.0/xunit.runner.visualstudio.props": {}
         }
-      },
-      "Chapter 14/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
-        "compile": {
-          "bin/placeholder/Chapter 14.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Chapter 14.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
       }
     }
   },
@@ -2872,16 +2859,11 @@
         "xunit.runner.visualstudio.2.5.6.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
-    },
-    "Chapter 14/1.0.0": {
-      "type": "project",
-      "path": "../Chapter 14/Chapter 14.csproj",
-      "msbuildProject": "../Chapter 14/Chapter 14.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "Chapter 14 >= 1.0.0",
+      "E:\\Repos\\Packt\\Minimal-APIs-in-ASP.NET-8\\Chapter 14 - Unit Testing, Compatibility and Deployment of Minimal APIs\\Chapter 14\\Chapter 14.csproj",
       "Microsoft.AspNetCore.Mvc.Testing >= 8.0.8",
       "Microsoft.AspNetCore.Testing >= 8.9.1",
       "Microsoft.NET.Test.Sdk >= 17.9.0",
@@ -2897,11 +2879,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Repos\\Packt\\Minimal-APIs-in-ASP.NET-8\\Chapter 14\\Chapter14Tests\\Chapter14Tests.csproj",
+      "projectUniqueName": "E:\\Repos\\Packt\\Minimal-APIs-in-ASP.NET-8\\Chapter 14 - Unit Testing, Compatibility and Deployment of Minimal APIs\\Chapter14 - Tests\\Chapter14Tests.csproj",
       "projectName": "Chapter14Tests",
-      "projectPath": "E:\\Repos\\Packt\\Minimal-APIs-in-ASP.NET-8\\Chapter 14\\Chapter14Tests\\Chapter14Tests.csproj",
+      "projectPath": "E:\\Repos\\Packt\\Minimal-APIs-in-ASP.NET-8\\Chapter 14 - Unit Testing, Compatibility and Deployment of Minimal APIs\\Chapter14 - Tests\\Chapter14Tests.csproj",
       "packagesPath": "C:\\Users\\nickp\\.nuget\\packages\\",
-      "outputPath": "E:\\Repos\\Packt\\Minimal-APIs-in-ASP.NET-8\\Chapter 14\\Chapter14Tests\\obj\\",
+      "outputPath": "E:\\Repos\\Packt\\Minimal-APIs-in-ASP.NET-8\\Chapter 14 - Unit Testing, Compatibility and Deployment of Minimal APIs\\Chapter14 - Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2923,8 +2905,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "E:\\Repos\\Packt\\Minimal-APIs-in-ASP.NET-8\\Chapter 14\\Chapter 14\\Chapter 14.csproj": {
-              "projectPath": "E:\\Repos\\Packt\\Minimal-APIs-in-ASP.NET-8\\Chapter 14\\Chapter 14\\Chapter 14.csproj"
+            "E:\\Repos\\Packt\\Minimal-APIs-in-ASP.NET-8\\Chapter 14 - Unit Testing, Compatibility and Deployment of Minimal APIs\\Chapter 14\\Chapter 14.csproj": {
+              "projectPath": "E:\\Repos\\Packt\\Minimal-APIs-in-ASP.NET-8\\Chapter 14 - Unit Testing, Compatibility and Deployment of Minimal APIs\\Chapter 14\\Chapter 14.csproj"
             }
           }
         }
@@ -2988,5 +2970,16 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100-preview.6.24328.19/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1104",
+      "level": "Error",
+      "message": "Unable to find project 'E:\\Repos\\Packt\\Minimal-APIs-in-ASP.NET-8\\Chapter 14 - Unit Testing, Compatibility and Deployment of Minimal APIs\\Chapter 14\\Chapter 14.csproj'. Check that the project reference is valid and that the project file exists.",
+      "libraryId": "E:\\Repos\\Packt\\Minimal-APIs-in-ASP.NET-8\\Chapter 14 - Unit Testing, Compatibility and Deployment of Minimal APIs\\Chapter 14\\Chapter 14.csproj",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
 }

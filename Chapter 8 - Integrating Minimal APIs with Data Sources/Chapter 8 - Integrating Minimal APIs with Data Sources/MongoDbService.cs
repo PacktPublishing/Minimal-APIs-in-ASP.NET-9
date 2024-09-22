@@ -25,11 +25,10 @@
             return result;
         }
 
-        public EmployeeMongo ToEmployeeMongo(IEmployee employee)
+        public async Task AddEmployeeAsync(IEmployee employee)
         {
-            return new EmployeeMongo
+            var employeeToAdd = new EmployeeMongo
             {
-                
                 Name = employee.Name,
                 Salary = employee.Salary,
                 Address = employee.Address,
@@ -39,29 +38,8 @@
                 Country = employee.Country,
                 Phone = employee.Phone
             };
-        }
-
-        public async Task AddEmployeeAsync(IEmployee employee)
-        {
-            var employeeToAdd = ToEmployeeMongo(employee);
             await _employeesCollection.InsertOneAsync(employeeToAdd);
-            //using (var connection = new SqlConnection(_connectionString))
-            //{
-            //    await connection.OpenAsync();
-            //    using (var command = new SqlCommand(
-            //        "INSERT INTO Employees (Name, Salary, Address, City, Region, Country, Phone) VALUES (@Name, " +
-            //                                                    "@Salary, @Address, @City, @Region, @Country, @Phone)", connection))
-            //    {
-            //        command.Parameters.AddWithValue("@Name", employeeToAdd.Name);
-            //        command.Parameters.AddWithValue("@Salary", employeeToAdd.Salary);
-            //        command.Parameters.AddWithValue("@Address", employeeToAdd.Address);
-            //        command.Parameters.AddWithValue("@City", employeeToAdd.City);
-            //        command.Parameters.AddWithValue("@Region", employeeToAdd.Region);
-            //        command.Parameters.AddWithValue("@Country", employeeToAdd.Country);
-            //        command.Parameters.AddWithValue("@Phone", employeeToAdd.Phone);
-            //        await command.ExecuteNonQueryAsync();
-            //    }
-            //}
+          
         }
     }
 }

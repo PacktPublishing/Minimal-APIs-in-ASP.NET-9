@@ -5,7 +5,7 @@ namespace Chapter_8___Integrating_Minimal_APIs_with_Data_Sources
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
-            builder.Services.AddSingleton<IDatabaseService, SqlService>();
+            builder.Services.AddSingleton<SqlService>();
             builder.Services.AddSingleton<MongoDbService>();
             builder.Services.AddSingleton<IDatabaseService>(sp =>
             {

@@ -1,7 +1,10 @@
-﻿namespace Chapter_8___Integrating_Minimal_APIs_with_Data_Sources
+﻿using MongoDB.Bson.Serialization.Attributes;
+
+namespace Chapter_8___Integrating_Minimal_APIs_with_Data_Sources
 {
     public class Employee : IEmployee
     {
+       
         public int Id { get; set; }
         public string Name { get; set; }
         public decimal Salary { get; set; }

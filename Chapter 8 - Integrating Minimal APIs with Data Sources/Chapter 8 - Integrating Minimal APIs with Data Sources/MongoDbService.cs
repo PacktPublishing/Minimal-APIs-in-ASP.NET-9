@@ -8,7 +8,7 @@
     using System.Threading.Tasks;
     public class MongoDbService : IDatabaseService
     {
-        private readonly IMongoCollection<EmployeMongoDb> _employeesCollection;
+        private readonly IMongoCollection<EmployeeMongoDb> _employeesCollection;
         private readonly string _connectionString;
         
         public MongoDbService(IConfiguration configuration)
@@ -27,7 +27,7 @@
 
         public async Task AddEmployeeAsync(IEmployee employee)
         {
-            var employeeToAdd = new EmployeMongoDb
+            var employeeToAdd = new EmployeeMongoDb
             {
                 Name = employee.Name,
                 Salary = employee.Salary,

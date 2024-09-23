@@ -18,6 +18,7 @@ namespace Chapter_9___Entity_Framework_Core_and_Dapper
             builder.Services.AddSingleton<DapperService>();
             builder.Services.AddScoped<MyCompanyContext>();
             builder.Services.AddScoped<EmployeeService>();
+            builder.Services.AddResponseCaching();
             builder.Services.AddMemoryCache();
             var app = builder.Build();
 
@@ -34,12 +35,50 @@ namespace Chapter_9___Entity_Framework_Core_and_Dapper
                 return Results.Created();
             });
 
-            app.MapGet("/employees/{id}", async (int id, [FromServices] DapperService dapperService, HttpContext context) =>
+            //IMemoryCache Example
+            app.MapGet("/employees/{id}", async (int id, [FromServices] DapperService dapperService, 
+                IMemoryCache memoryCache
+                ) =>
+            {
+
+                if (memoryCache.TryGetValue(id, out var result))
+                {
+                    return result;
+                }
+                var employee = await dapperService.GetEmployeeById(id);
+
+                var cacheEntryOptions = new MemoryCacheEntryOptions()
+                        .SetSlidingExpiration(TimeSpan.FromSeconds(30));
+                memoryCache.Set<Employee>(employee.Id, employee, cacheEntryOptions);
+
+                return Results.Ok(employee);
+            });
+
+            //Response caching example
+            app.MapGet("/employees/{id}", async (int id, [FromServices] DapperService dapperService,
+                HttpContext context
+                ) =>
+            {
+                var employee = await dapperService.GetEmployeeById(id);
+                context.Response.GetTypedHeaders().CacheControl =
+            new Microsoft.Net.Http.Headers.CacheControlHeaderValue()
+            {
+                Public = true,
+                MaxAge = TimeSpan.FromSeconds(60)
+            };
+                context.Response.Headers[Microsoft.Net.Http.Headers.HeaderNames.Vary] =
+                    new string[] { "Accept-Encoding" };
+
+                return Results.Ok(employee);
+            });
+
+            //redis example
+            app.MapGet("/employees/{id}", async (int id, [FromServices] DapperService dapperService) =>
             {
                 ConfigurationOptions options = new ConfigurationOptions
                 {
                     EndPoints = { { "192.168.2.8", 6379 } },
-                    
+
                 };
 
                 ConnectionMultiplexer redis = ConnectionMultiplexer.Connect(options);
@@ -54,28 +93,6 @@ namespace Chapter_9___Entity_Framework_Core_and_Dapper
 
                 var employee = await dapperService.GetEmployeeById(id);
                 db.StringSet(employeeIdKey, JsonSerializer.Serialize(employee));
-               
-                var cache = app.Services.GetRequiredService<IMemoryCache>();
-                if(cache.TryGetValue(id, out var result))
-                {
-                    return result;
-                }
-                
-                
-                var cacheEntryOptions = new MemoryCacheEntryOptions()
-                        .SetSlidingExpiration(TimeSpan.FromSeconds(30));
-                cache.Set<Employee>(employee.Id, employee, cacheEntryOptions);
-
-                var employee = await dapperService.GetEmployeeById(id);
-                context.Response.GetTypedHeaders().CacheControl =
-            new Microsoft.Net.Http.Headers.CacheControlHeaderValue()
-            {
-                Public = true,
-                MaxAge = TimeSpan.FromSeconds(60)
-            };
-                context.Response.Headers[Microsoft.Net.Http.Headers.HeaderNames.Vary] =
-                    new string[] { "Accept-Encoding" };
-
                 return Results.Ok(employee);
             });
 

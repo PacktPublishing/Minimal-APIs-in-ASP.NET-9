@@ -1,7 +1,7 @@
 ﻿using MongoDB.Bson.Serialization.Attributes;
 namespace Chapter_8___Integrating_Minimal_APIs_with_Data_Sources
 {
-    public class EmployeMongoDb : IEmployee
+    public class EmployeeMongoDb : IEmployee
     {
         [BsonId]
         [BsonRepresentation(MongoDB.Bson.BsonType.ObjectId)]

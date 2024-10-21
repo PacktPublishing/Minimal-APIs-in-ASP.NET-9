@@ -49,8 +49,8 @@ namespace Chapter_8___Integrating_Minimal_APIs_with_Data_Sources
             {
                 await connection.OpenAsync();
                 using (var command = new SqlCommand(
-                    "INSERT INTO Employees (Name, Salary, Address, City, Region, Country, Phone) VALUES (@Name, " +
-                                                                "@Salary, @Address, @City, @Region, @Country, @Phone)", connection))
+                    "INSERT INTO Employees (Name, Salary, Address, City, Region, Country, Phone, PostalCode) VALUES (@Name, " +
+                                                                "@Salary, @Address, @City, @Region, @Country, @Phone, @PostalCode)", connection))
                 {
                     command.Parameters.AddWithValue("@Name", employee.Name);
                     command.Parameters.AddWithValue("@Salary", employee.Salary);
@@ -59,6 +59,7 @@ namespace Chapter_8___Integrating_Minimal_APIs_with_Data_Sources
                     command.Parameters.AddWithValue("@Region", employee.Region);
                     command.Parameters.AddWithValue("@Country", employee.Country);
                     command.Parameters.AddWithValue("@Phone", employee.Phone);
+                    command.Parameters.AddWithValue("@PostalCode", employee.PostalCode);
                     await command.ExecuteNonQueryAsync();
                 }
             }

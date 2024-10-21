@@ -16,7 +16,7 @@
             _connectionString = configuration.GetConnectionString("MongoDbConnection");
             var mongoClient = new MongoClient(_connectionString);
             var mongoDatabase = mongoClient.GetDatabase("MyCompany");
-            _employeesCollection = mongoDatabase.GetCollection<EmployeMongoDb>("Employees");
+            _employeesCollection = mongoDatabase.GetCollection<EmployeeMongoDb>("Employees");
         }
         
         public async Task<IEnumerable<IEmployee>> GetEmployeesAsync()

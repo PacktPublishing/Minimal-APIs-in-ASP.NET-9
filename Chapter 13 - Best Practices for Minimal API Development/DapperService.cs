@@ -12,7 +12,7 @@ namespace Chapter_9___Entity_Framework_Core_and_Dapper
         {
             using (var sqlConnection = new SqlConnection("YOURCONNECTIONSTRING"))
             {
-                var sql = "INSERT INTO Employees (Name, Salary, Address, City, Region, Country, Phone) VALUES(@Name, @Salary, @Address, @City, @Region, @Country, @Phone)";
+                var sql = "INSERT INTO Employees (Name, Salary, Address, City, Region, Country, Phone) VALUES(@Name, @Salary, @Address, @City, @Region, @Country, @Phone, @PostalCode)";
                 
                 await sqlConnection.ExecuteAsync(sql, new
                 {
@@ -22,7 +22,8 @@ namespace Chapter_9___Entity_Framework_Core_and_Dapper
                     employee.City,
                     employee.Region,
                     employee.Country,
-                    employee.Phone
+                    employee.Phone,
+                    employee.PostalCode
                 });
             }
         }
@@ -41,7 +42,7 @@ namespace Chapter_9___Entity_Framework_Core_and_Dapper
         {
             using (var sqlConnection = new SqlConnection("YOURCONNECTIONSTRING"))
             {
-                var sql = "UPDATE Employees SET Name = @Name, Salary = @Salary, Address = @Address, City = @City, Region = @Region WHERE Id = @id";
+                var sql = "UPDATE Employees SET Name = @Name, Salary = @Salary, Address = @Address, City = @City, Region = @Region, PostalCode = @PostalCode WHERE Id = @id";
                 var parameters = new
                 {
                     employee.Id,
@@ -49,7 +50,8 @@ namespace Chapter_9___Entity_Framework_Core_and_Dapper
                     employee.Salary,
                     employee.Address,
                     employee.City,
-                    employee.Region
+                    employee.Region,
+                    employee.PostalCode
                 };
                 await sqlConnection.ExecuteAsync(sql, parameters);
             }

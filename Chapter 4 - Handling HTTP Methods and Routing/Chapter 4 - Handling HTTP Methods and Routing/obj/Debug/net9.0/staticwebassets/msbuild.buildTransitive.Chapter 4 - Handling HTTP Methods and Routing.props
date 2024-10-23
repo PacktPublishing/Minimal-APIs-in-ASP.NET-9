@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\Chapter 4 - Handling HTTP Methods and Routing.props" />
-</Project>

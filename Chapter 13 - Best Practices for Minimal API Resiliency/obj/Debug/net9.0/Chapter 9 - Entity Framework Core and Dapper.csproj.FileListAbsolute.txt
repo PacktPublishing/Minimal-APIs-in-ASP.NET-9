@@ -1,7 +1,0 @@
-E:\Repos\Packt\Minimal-APIs-in-ASP.NET-8\Chapter 9 - Entity Framework Core and Dapper\Chapter 9 - Entity Framework Core and Dapper\obj\Debug\net9.0\Chapter 9 - Entity Framework Core and Dapper.csproj.AssemblyReference.cache
-E:\Repos\Packt\Minimal-APIs-in-ASP.NET-8\Chapter 9 - Entity Framework Core and Dapper\Chapter 9 - Entity Framework Core and Dapper\obj\Debug\net9.0\Chapter 9 - Entity Framework Core and Dapper.GeneratedMSBuildEditorConfig.editorconfig
-E:\Repos\Packt\Minimal-APIs-in-ASP.NET-8\Chapter 9 - Entity Framework Core and Dapper\Chapter 9 - Entity Framework Core and Dapper\obj\Debug\net9.0\Chapter 9 - Entity Framework Core and Dapper.AssemblyInfoInputs.cache
-E:\Repos\Packt\Minimal-APIs-in-ASP.NET-8\Chapter 9 - Entity Framework Core and Dapper\Chapter 9 - Entity Framework Core and Dapper\obj\Debug\net9.0\Chapter 9 - Entity Framework Core and Dapper.AssemblyInfo.cs
-E:\Repos\Packt\Minimal-APIs-in-ASP.NET-8\Chapter 9 - Entity Framework Core and Dapper\Chapter 9 - Entity Framework Core and Dapper\obj\Debug\net9.0\Chapter 9 - Entity Framework Core and Dapper.csproj.CoreCompileInputs.cache
-E:\Repos\Packt\Minimal-APIs-in-ASP.NET-8\Chapter 9 - Entity Framework Core and Dapper\Chapter 9 - Entity Framework Core and Dapper\obj\Debug\net9.0\Chapter 9 - Entity Framework Core and Dapper.MvcApplicationPartsAssemblyInfo.cache
-E:\Repos\Packt\Minimal-APIs-in-ASP.NET-8\Chapter 9 - Entity Framework Core and Dapper\Chapter 9 - Entity Framework Core and Dapper\obj\Debug\net9.0\Chapter 9 - Entity Framework Core and Dapper.sourcelink.json

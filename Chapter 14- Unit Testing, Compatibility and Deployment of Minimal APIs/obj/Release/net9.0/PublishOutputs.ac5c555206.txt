@@ -1,7 +1,0 @@
-E:\Repos\Packt\Minimal-APIs-in-ASP.NET-8\Chapter 14\Chapter 14\obj\Release\net9.0\PubTmp\Out\Chapter 14.exe
-E:\Repos\Packt\Minimal-APIs-in-ASP.NET-8\Chapter 14\Chapter 14\obj\Release\net9.0\PubTmp\Out\appsettings.Development.json
-E:\Repos\Packt\Minimal-APIs-in-ASP.NET-8\Chapter 14\Chapter 14\obj\Release\net9.0\PubTmp\Out\appsettings.json
-E:\Repos\Packt\Minimal-APIs-in-ASP.NET-8\Chapter 14\Chapter 14\obj\Release\net9.0\PubTmp\Out\Chapter 14.dll
-E:\Repos\Packt\Minimal-APIs-in-ASP.NET-8\Chapter 14\Chapter 14\obj\Release\net9.0\PubTmp\Out\Chapter 14.deps.json
-E:\Repos\Packt\Minimal-APIs-in-ASP.NET-8\Chapter 14\Chapter 14\obj\Release\net9.0\PubTmp\Out\Chapter 14.runtimeconfig.json
-E:\Repos\Packt\Minimal-APIs-in-ASP.NET-8\Chapter 14\Chapter 14\obj\Release\net9.0\PubTmp\Out\Chapter 14.pdb

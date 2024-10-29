@@ -49,7 +49,7 @@ With the following software and hardware list you can run all code files present
 | 1-14        | MongoDB Server            | Microsoft SQL Server Management Studio |
 | 1-14        | MongoDB Compass            | None – setup and confi guration for Minimal APIs is covered in the book |
 | 1-14        | Visual Studio 2022            | Basic |
-| 61-14        | Visual Studio Code            | Basic (if used – Visual Studio can be used alternatively) |
+| 1-14        | Visual Studio Code            | Basic (if used – Visual Studio can be used alternatively) |
 | 1-14        | Object-Oriented Programming            | Basic |
 
 
